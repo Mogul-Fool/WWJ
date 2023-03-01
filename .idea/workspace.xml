@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a28dd910-59db-4ab6-b475-b0fa5539a81c" name="变更" comment="3.1-3 org改成com guigu改成wwj">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/ServiceAuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/mapper/SysRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/auth/TestMpDemo1.java" afterDir="false" />
+    <list default="true" id="a28dd910-59db-4ab6-b475-b0fa5539a81c" name="变更" comment="3.1-4 测试，获取所有人信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/org/wwj/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/auth/TestMpDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/auth/TestMpDemo1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +46,8 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
     "last_opened_file_path": "C:/Users/wang-/Desktop/2023/Java_Class/wwj-project/model/src/main/java",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "9e8e90fd9deb19ca70adff9666833ee8"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -66,7 +61,39 @@
       <recent name="C:\Users\wang-\Desktop\2023\Java_Class\wwj-project\model\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestMpDemo1.deleteId">
+    <configuration name="TestMpDemo1.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMpDemo1.deleteId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
+      <option name="METHOD_NAME" value="deleteId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestMpDemo1.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
@@ -83,8 +110,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestMpDemo1.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestMpDemo1.deleteId" />
+        <item itemvalue="JUnit.TestMpDemo1.update" />
+        <item itemvalue="JUnit.TestMpDemo1.add" />
         <item itemvalue="JUnit.TestMpDemo1.getAll" />
       </list>
     </recent_temporary>
@@ -98,7 +144,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677654765744</updated>
       <workItem from="1677654767011" duration="192000" />
-      <workItem from="1677654974557" duration="8010000" />
+      <workItem from="1677654974557" duration="8138000" />
+      <workItem from="1677665181638" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="3.1-1">
       <created>1677655350602</created>
@@ -121,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677657707810</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3.1-4 测试，获取所有人信息">
+      <created>1677665063365</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677665063365</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +203,7 @@
     <MESSAGE value="3.1-1" />
     <MESSAGE value="3.1-2" />
     <MESSAGE value="3.1-3 org改成com guigu改成wwj" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1-3 org改成com guigu改成wwj" />
+    <MESSAGE value="3.1-4 测试，获取所有人信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1-4 测试，获取所有人信息" />
   </component>
 </project>
