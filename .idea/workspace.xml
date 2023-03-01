@@ -4,51 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a28dd910-59db-4ab6-b475-b0fa5539a81c" name="变更" comment="3.1-2">
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/base/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/process/Process.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/process/ProcessRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/process/ProcessTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/process/ProcessType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysDept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysLoginLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysOperLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysRoleMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/system/SysUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/model/wechat/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/process/ApprovalVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/process/ProcessFormVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/process/ProcessQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/process/ProcessVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/AssginMenuVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/AssginRoleVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/LoginVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/MetaVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/RouterVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/SysLoginLogQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/SysOperLogQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/SysPostQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/SysRoleQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/system/SysUserQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/wechat/BindPhoneVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/wwj/vo/wechat/MenuVo.java" afterDir="false" />
+    <list default="true" id="a28dd910-59db-4ab6-b475-b0fa5539a81c" name="变更" comment="3.1-3 org改成com guigu改成wwj">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/ServiceAuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/mapper/SysRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/auth/TestMpDemo1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/service-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/wwj/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/org/wwj/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,6 +66,29 @@
       <recent name="C:\Users\wang-\Desktop\2023\Java_Class\wwj-project\model\src\main\java" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="TestMpDemo1.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMpDemo1.getAll" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -98,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677654765744</updated>
       <workItem from="1677654767011" duration="192000" />
-      <workItem from="1677654974557" duration="2700000" />
+      <workItem from="1677654974557" duration="8010000" />
     </task>
     <task id="LOCAL-00001" summary="3.1-1">
       <created>1677655350602</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677656391357</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="3.1-3 org改成com guigu改成wwj">
+      <created>1677657707810</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677657707810</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +148,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="3.1-1" />
     <MESSAGE value="3.1-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1-2" />
+    <MESSAGE value="3.1-3 org改成com guigu改成wwj" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1-3 org改成com guigu改成wwj" />
   </component>
 </project>
