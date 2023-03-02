@@ -2,6 +2,8 @@ package com.atguigu.auth;
 
 
 import com.atguigu.auth.mapper.SysRoleMapper;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.wwj.model.system.SysRole;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,4 +51,19 @@ public class TestMpDemo1 {
         int rows = mapper.deleteById(10);
     }
 
+    @Test
+    public void testQuery1() {
+            QueryWrapper<SysRole> wrapper = new QueryWrapper<>();
+            wrapper.eq("role_name","总经理");
+        List<SysRole> list = mapper.selectList(wrapper);
+        System.out.println(list);
+    }
+
+    @Test
+    public void testQuery2() {
+        LambdaQueryWrapper<SysRole> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(SysRole::getRoleName,"总经理");
+        List<SysRole> list = mapper.selectList(wrapper);
+        System.out.println(list);
+    }
 }
