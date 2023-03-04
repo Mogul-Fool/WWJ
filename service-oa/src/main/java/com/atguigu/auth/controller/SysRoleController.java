@@ -37,11 +37,11 @@ public class SysRoleController {
     @GetMapping("/findAll")
     public Result findAll() {
         List<SysRole> list = sysRoleService.list();
-        try {
-            int i = 10/0;
-        } catch (Exception e) {
-            throw new GuiguException(20001,"执行了自定义异常处理..");
-        }
+//        try {
+//            int i = 10/0;
+//        } catch (Exception e) {
+//            throw new GuiguException(20001,"执行了自定义异常处理..");
+//        }
         return Result.ok(list);
     }
 
@@ -103,7 +103,7 @@ public class SysRoleController {
         }
     }
 
-    @ApiOperation(value = "根据id列表删除")
+    @ApiOperation(value = "批量删除")
     @DeleteMapping("batchRemove")
     public Result batchRemove(@RequestBody List<Long> idList) {
         boolean is_success = sysRoleService.removeByIds(idList);
