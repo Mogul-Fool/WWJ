@@ -9,7 +9,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mysql.cj.xdevapi.Warning;
 import com.wwj.model.system.SysRole;
+import com.wwj.vo.system.AssginRoleVo;
 import com.wwj.vo.system.SysRoleQueryVo;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -17,7 +19,9 @@ import org.springframework.web.bind.annotation.*;
 import org.yaml.snakeyaml.events.Event;
 
 import java.util.List;
+import java.util.Map;
 
+@Api(tags = "角色管理接口")
 @RestController
 @RequestMapping("/admin/system/sysRole")
 public class SysRoleController {
@@ -25,6 +29,22 @@ public class SysRoleController {
     // http://localhost:8800/admin/system/sysRole/findAll
     @Autowired
     private SysRoleService sysRoleService;
+
+    //1 查询所有角色 和 当前用户所属角色
+    @ApiOperation("获取角色")
+    @GetMapping("/toAssign/{userId}")
+    public Result toAssign(@PathVariable Long userId) {
+        Map<String,Object> map = sysRoleService.findRoleDataByUserId(userId);
+        return Result.ok(map);
+    }
+
+    //2 为用户分配角色
+    @ApiOperation("为用户分配角色")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestBody AssginRoleVo assginRoleVo) {
+        sysRoleService.doAssign(assginRoleVo);
+        return Result.ok();
+    }
 
 /*    @GetMapping("/findAll")
     public List<SysRole> findAll() {
@@ -76,7 +96,7 @@ public class SysRoleController {
 
     @ApiOperation("根据id查询")
     @GetMapping("get/{id}")
-    public Result updateById(@PathVariable Long id) {
+    public Result get(@PathVariable Long id) {
         SysRole sysRole = sysRoleService.getById(id);
         return Result.ok(sysRole);
     }
