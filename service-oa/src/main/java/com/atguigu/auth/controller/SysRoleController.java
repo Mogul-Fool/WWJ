@@ -14,6 +14,7 @@ import com.wwj.vo.system.SysRoleQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.yaml.snakeyaml.events.Event;
@@ -68,6 +69,7 @@ public class SysRoleController {
     //条件分页查询
     //page当前页 limit 每页显示记录数
     //SysRoleQueryVo 条件查询
+    @PreAuthorize("hasAnyAuthority('bnt.sysRole.list')")
     @ApiOperation("条件分页查询")
     @GetMapping("{page}/{limit}")
     public Result pageQueryRole(@PathVariable Long page,
@@ -83,6 +85,7 @@ public class SysRoleController {
         return Result.ok(pageModel);
     }
 
+    @PreAuthorize("hasAuthority('bnt.sysRole.add')")
     @ApiOperation("添加角色")
     @PostMapping("save")
     public Result save(SysRole role) {
@@ -94,6 +97,7 @@ public class SysRoleController {
         }
     }
 
+    @PreAuthorize("hasAuthority('bnt.sysRole.list')")
     @ApiOperation("根据id查询")
     @GetMapping("get/{id}")
     public Result get(@PathVariable Long id) {
@@ -101,9 +105,11 @@ public class SysRoleController {
         return Result.ok(sysRole);
     }
 
+    @PreAuthorize("hasAuthority('bnt.sysRole.update')")
     @ApiOperation("修改角色")
-    @PutMapping("update")
-    public Result update(SysRole role) {
+    @PutMapping ("update")
+    public Result update(@RequestBody SysRole role) {
+        //调用service的方法
         boolean is_success = sysRoleService.updateById(role);
         if(is_success) {
             return Result.ok();
@@ -112,6 +118,7 @@ public class SysRoleController {
         }
     }
 
+    @PreAuthorize("hasAuthority('bnt.sysRole.remove')")
     @ApiOperation(value = "根据id列表删除")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {
@@ -123,6 +130,7 @@ public class SysRoleController {
         }
     }
 
+    @PreAuthorize("hasAuthority('bnt.sysRole.remove')")
     @ApiOperation(value = "批量删除")
     @DeleteMapping("batchRemove")
     public Result batchRemove(@RequestBody List<Long> idList) {

@@ -229,4 +229,9 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
         return permsList;
     }
+
+    @Override
+    public List<String> findUserPermsList(Long id) {
+        return null;
+    }
 }

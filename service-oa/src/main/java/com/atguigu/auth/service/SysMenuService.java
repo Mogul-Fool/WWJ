@@ -1,9 +1,9 @@
 package com.atguigu.auth.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.wwj.model.system.SysMenu;
 import com.wwj.vo.system.AssginMenuVo;
 import com.wwj.vo.system.RouterVo;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 
@@ -13,18 +13,20 @@ import java.util.List;
  * </p>
  *
  * @author atguigu
- * @since 2023-03-05
+ * @since 2023-02-02
  */
 public interface SysMenuService extends IService<SysMenu> {
 
     //菜单列表接口
     List<SysMenu> findNodes();
 
+    //删除菜单
     void removeMenuById(Long id);
 
+    //查询所有菜单和角色分配的菜单
     List<SysMenu> findMenuByRoleId(Long roleId);
 
-    //为角色分配菜单
+    //角色分配菜单
     void doAssign(AssginMenuVo assginMenuVo);
 
     //4 根据用户id获取用户可以操作菜单列表
@@ -32,4 +34,6 @@ public interface SysMenuService extends IService<SysMenu> {
 
     //5 根据用户id获取用户可以操作按钮列表
     List<String> findUserPermsByUserId(Long userId);
+
+    List<String> findUserPermsList(Long id);
 }

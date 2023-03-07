@@ -7,12 +7,15 @@ public enum ResultCodeEnum {
 
     SUCCESS(200,"成功"),
     FAIL(201, "失败"),
-    SERVICE_ERROR(2012, "服务异常"),
+    LOGIN_ERROR(202,"认证失败"),
+
+    SERVICE_ERROR(203, "服务异常"),
+
     DATA_ERROR(204, "数据异常"),
 
-    LOGIN_AUTH(208, "未登陆"),
-    PERMISSION(209, "没有权限")
-    ;
+    LOGIN_AUTH(205, "未登陆"),
+    PERMISSION(206, "没有权限"),
+    ACCOUNT_STOP(27,"没有授权");
 
     private Integer code;
 

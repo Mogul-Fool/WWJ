@@ -3,16 +3,14 @@ package com.atguigu.auth.service.impl;
 import com.atguigu.auth.mapper.SysRoleMapper;
 import com.atguigu.auth.service.SysRoleService;
 import com.atguigu.auth.service.SysUserRoleService;
-import com.atguigu.auth.service.SysUserService;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wwj.model.system.SysRole;
 import com.wwj.model.system.SysUserRole;
 import com.wwj.vo.system.AssginRoleVo;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,6 +23,8 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
 
     @Autowired
     private SysUserRoleService sysUserRoleService;
+
+    //1 查询所有角色 和 当前用户所属角色
     @Override
     public Map<String, Object> findRoleDataByUserId(Long userId) {
 
@@ -51,18 +51,19 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
         List<SysRole> assignRoleList = new ArrayList<>();
         for(SysRole sysRole : allRoleList) {
             //比较
-        if(existRoleIdList.contains(sysRole.getId())) {
-            assignRoleList.add(sysRole);
+            if(existRoleIdList.contains(sysRole.getId())) {
+                assignRoleList.add(sysRole);
+            }
         }
-    }
 
-    //4 把得到两部分数据封装map集合，返回
-    Map<String, Object> roleMap = new HashMap<>();
+        //4 把得到两部分数据封装map集合，返回
+        Map<String, Object> roleMap = new HashMap<>();
         roleMap.put("assginRoleList", assignRoleList);
         roleMap.put("allRolesList", allRoleList);
         return roleMap;
     }
 
+    //2 为用户分配角色
     @Override
     public void doAssign(AssginRoleVo assginRoleVo) {
         //把用户之前分配角色数据删除，用户角色关系表里面，根据userid删除
